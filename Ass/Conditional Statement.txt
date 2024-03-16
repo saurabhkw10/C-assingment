@@ -1,0 +1,870 @@
+Assignment : C Programming Conditional Statement
+Name : Saurabh Kashinath Wani
+
+=====================================================================================================================================
+
+1.	Write a C program to accept two integers and check whether they are equal or not.
+	Test Data: 15 15
+	Expected Output:
+		Number1 and Number2 are equal.
+
+#include <stdio.h>
+int main() 
+{
+    int number1, number2;
+
+    printf("Enter the first integer: ");
+    scanf("%d", &number1);
+    printf("Enter the second integer: ");
+    scanf("%d", &number2);
+
+    if (number1 == number2) 
+	{
+        printf("Number1 and Number2 are equal.\n");
+    } else {
+        printf("Number1 and Number2 are not equal.\n");
+    }
+}
+
+Output:
+
+Enter the first integer: 16
+Enter the second integer: 16
+Number1 and Number2 are equal.
+
+=====================================================================================================================================
+
+2.	Write a C program to check whether a given number is even or odd. 
+	Test Data: 15
+	Expected Output:
+		15 is an odd integer.
+
+#include <stdio.h>
+int main(void)
+{
+	int no1;
+	printf("enter 1 number:\n");
+	scanf("%d",&no1);
+	if (no1 % 2 == 0)
+	{
+		printf("%d is an even integer",no1);
+	}
+	else
+	{
+		printf("%d is an odd integer",no1);
+	}
+return 0;
+}
+
+Output:
+
+enter 1 number:
+17
+17 is an odd integer
+=====================================================================================================================================
+
+3.	Write a C program to check whether a given number is positive or negative.
+	Test Data: 15
+	Expected Output:
+		15 is a positive number
+
+#include <stdio.h>
+int main() 
+{
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    if (number > 0) 
+	{
+        printf("%d is a positive.\n", number);
+    } 
+	else 
+	{
+        printf("%d is a negative.\n", number);
+    }
+}
+
+Output:
+
+Enter a number: 16
+16 is a positive.
+
+=====================================================================================================================================
+
+4.	Write a C program to find whether a given year is a leap year or not. 
+	Test Data: 2016
+	Expected Output:
+		2016 is a leap year.
+
+#include <stdio.h>
+int main() 
+{
+    int year;
+
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    if (year % 400 == 0) 
+		{
+        	printf("%d is a leap year.\n", year);
+    	} 
+	else if (year % 100 == 0) 
+		{
+        	printf("%d is not a leap year.\n", year);
+    	} 
+	else if (year % 4 == 0) 
+		{
+        	printf("%d is a leap year.\n", year);
+    	} 
+	else 
+		{
+        	printf("%d is not a leap year.\n", year);
+    	}
+}
+
+Output:
+
+Enter a year: 2016
+2016 is a leap year.
+
+=====================================================================================================================================
+
+5.	Write a C program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.
+	Test Data: 21
+	Expected Output:
+		Congratulation! You are eligible for casting your vote.
+
+#include <stdio.h>
+int main(void)
+{
+	int age;
+	printf("enter a age:\n");
+	scanf("%d",&age);
+	if (age>=21)
+	{
+		printf("Congratulations!you are eligible for vote:%d",age);
+	}
+	else
+	{
+		printf("Sorry!you are not eligible for vote:%d",age);
+	}
+}
+
+Output:
+
+enter a age:
+22
+Congratulations!you are eligible for vote:22
+
+=====================================================================================================================================
+
+6.	Write a C program to read the value of an integer m and display the value of n is 1 when m is larger than 0, 0 when m is 0 and -1 when m is less than 0. 
+	Test Data: -5
+	Expected Output:
+		The value of n = -1
+
+#include <stdio.h>
+int main() 
+{
+    int m, n;
+    printf("Enter a value for m: ");
+    scanf("%d", &m);
+    if (m > 0) 
+	{
+        n = 1;
+    } 
+	else if (m < 0) 
+	{
+        n = -1;
+    } 
+	else 
+	{
+        n = 0;
+    }
+    printf("The value of n = %d\n", n);
+}
+
+Output:
+
+Enter a value for m: -6
+The value of n = -1
+
+=====================================================================================================================================
+
+7.	Write a C program to accept the height of a person in centimeter and categorize the person according to their height.
+	Test Data: 135
+	Expected Output:
+		The person is Dwarf.
+
+#include <stdio.h>
+void categorize_person(int height) 
+{
+    if (height < 140) 
+	{
+        printf("The person is Dwarf.\n");
+    } 
+	else if (height < 150) 
+	{
+        printf("The person is Normal.\n");
+    } 
+	else if (height < 180) 
+	{
+        printf("The person is Tall.\n");
+    } 
+	else 
+	{
+        printf("The person is Giant.\n");
+    }
+}
+int main() 
+{
+    int height;
+    printf("Enter height in centimeters: ");
+    scanf("%d", &height);
+    categorize_person(height);
+}
+
+Output:
+
+Enter height in centimeters: 135
+The person is Dwarf.
+
+=====================================================================================================================================
+
+8.	Write a C program to find the largest of three numbers. 
+	Test Data: 12 25 52
+	Expected Output:
+		1st Number = 12,	2nd Number = 25,	3rd Number = 52 
+		The 3rd Number is the greatest among three.
+
+#include <stdio.h>
+int main() 
+{
+  int n1, n2, n3;
+  printf("First Number =");
+  scanf("%d" , &n1);
+  printf("\nSecond Number =");
+  scanf("%d" , &n2);
+  printf("\nThrird Number =");
+  scanf("%d" , &n3);
+  if (n1 >= n2 && n1 >= n3)
+    printf("The 1rd Number is the greatest among three.");
+  else if (n2 >= n1 && n2 >= n3)
+    printf("The 2rd Number is the greatest among three.");
+  else
+    printf("The 3rd Number is the greatest among three.");
+}
+
+Output:
+
+First Number =25
+
+Second Number =26
+
+Thrird Number =215
+The 3rd Number is the greatest among three.
+
+=====================================================================================================================================
+
+9.	Write a C program to accept a coordinate point in a X and Y coordinate system and determine in which quadrant the coordinate point lies.
+	Test Data: 7 9
+	Expected Output:
+		The coordinate point (7,9) lies in the First quadrant.
+
+#include <stdio.h>
+int main() 
+{
+    int x, y;
+    printf("Enter the X and Y coordinates: ");
+    scanf("%d %d", &x, &y);
+    if (x > 0 && y > 0)
+        printf("The coordinate point (%d, %d) lies in the First quadrant.\n", x, y);
+    else if (x < 0 && y > 0)
+        printf("The coordinate point (%d, %d) lies in the Second quadrant.\n", x, y);
+    else if (x < 0 && y < 0)
+        printf("The coordinate point (%d, %d) lies in the Third quadrant.\n", x, y);
+    else if (x > 0 && y < 0)
+        printf("The coordinate point (%d, %d) lies in the Fourth quadrant.\n", x, y);
+    else if (x == 0 && y == 0)
+        printf("The coordinate point (%d, %d) lies at the origin.\n", x, y);
+    else if (x == 0 && y != 0)
+        printf("The coordinate point (%d, %d) lies on the Y-axis.\n", x, y);
+    else if (x != 0 && y == 0)
+        printf("The coordinate point (%d, %d) lies on the X-axis.\n", x, y);
+}
+
+Output:
+
+Enter the X and Y coordinates: 8
+9
+The coordinate point (8, 9) lies in the First quadrant.
+
+=====================================================================================================================================
+
+10.	Write a C program to find the eligibility of admission for a professional course based on the following criteria:
+	Eligibility Criteria: 
+	Marks in Math’s >=65 and Marks in Phy >=55 and Marks in Chem>=50 and Total in all three subject >=190 or Total in Maths and Physics >=140. 
+	assume
+	Input the marks obtained in Physics :65
+	Input the marks obtained in Chemistry :51 
+	Input the marks obtained in Mathematics :72 
+	Total marks of Maths, Physics and Chemistry: 188 
+	Total marks of Maths and Physics: 137 
+	The candidate is not eligible.
+	Expected Output:
+		The candidate is not eligible for admission.
+
+#include <stdio.h>
+int main() 
+{
+    int maths, physics, chemistry;
+    int total_marks, maths_physics_total;
+    printf("Input the marks obtained in Physics: ");
+    scanf("%d", &physics);
+    printf("Input the marks obtained in Chemistry: ");
+    scanf("%d", &chemistry);
+    printf("Input the marks obtained in Mathematics: ");
+    scanf("%d", &maths);
+    total_marks = maths + physics + chemistry;
+    printf("Total marks of Maths, Physics and Chemistry: %d",total_marks);
+    maths_physics_total = maths + physics;
+    printf("\nTotal marks of Maths and Physics: %d",maths_physics_total);
+    if ((maths >= 65 && physics >= 55 && chemistry >= 50) && (total_marks >= 190 || maths_physics_total >= 140)) 
+	{
+        printf("\nThe candidate is eligible for admission.\n");
+    } else 
+	{
+        printf("\nThe candidate is not eligible for admission.\n");
+    }
+}
+
+Output:
+
+Input the marks obtained in Physics: 66
+Input the marks obtained in Chemistry: 80
+Input the marks obtained in Mathematics: 90
+Total marks of Maths, Physics and Chemistry: 236
+Total marks of Maths and Physics: 156
+The candidate is eligible for admission.
+
+=====================================================================================================================================
+
+11.	Write a C program to calculate the root of a Quadratic Equation. 
+	Test Data: 1 5 7
+	Expected Output:
+		Root is imaginary;
+		No solution.
+
+#include <stdio.h>
+int main() 
+{
+   int a, b, c, discriminant, realPart, imagPart;
+   printf("Enter coefficients a, b and c: ");
+   scanf("%d %d %d", &a, &b, &c);
+   discriminant = b * b - 4 * a * c;
+   if (discriminant > 0) 
+   {
+       realPart = -b / (2 * a);
+       imagPart = sqrt(-discriminant) / (2 * a);
+       printf("Roots are real and different\n");
+       printf("root1 = %.2f+%.2fi and root2 = %.2f-%.2fi\n", (float)realPart/100, (float)imagPart/100, (float)realPart/100, (float)imagPart/100);
+   }
+   else if (discriminant == 0) 
+   {
+       realPart = -b / (2 * a);
+       printf("Roots are real and same\n");
+       printf("root1 = root2 = %.2f\n", (float)realPart/100);
+   }
+   else 
+   {
+       printf("Root is imaginary;\n");
+       printf("No solution.");
+   }
+}
+
+Output:
+
+Enter coefficients a, b and c: 1
+5
+7
+Root is imaginary;
+No solution.
+
+=====================================================================================================================================
+
+12.	Write a C program to read roll no, name and marks of three subjects and calculate the total, percentage and division.
+	Test Data:
+	Input the Roll Number of the student :784 
+	Input the Name of the Student: James
+	Input the marks of Physics, Chemistry and Computer Application: 70 80 90
+	Expected Output:
+		Roll No: 784
+		Name of Student: James 
+		Marks in Physics: 70 
+		Marks in Chemistry: 80
+		Marks in Computer Application: 90 
+		Total Marks = 240
+		Percentage = 80.00
+		Division = First
+
+#include <stdio.h>
+
+int main() 
+{
+    int rollno, physics, chemistry, comp, total;
+    char name[50];
+    float percentage;
+
+    printf("Enter roll number: ");
+    scanf("%d", &rollno);
+
+    printf("Enter name: ");
+    scanf("%s", name);
+
+    printf("Enter marks in physics: ");
+    scanf("%d", &physics);
+
+    printf("Enter marks in chemistry: ");
+    scanf("%d", &chemistry);
+
+    printf("Enter marks in math: ");
+    scanf("%d", &comp);
+
+    total = physics + chemistry + comp;
+    percentage = (total / 300.0) * 100;
+
+    printf("\nMarksheet\n");
+    printf("Roll No: %d\n", rollno);
+    printf("Name of Student: %s\n", name);
+    printf("Marks in Physics: %d\n", physics);
+    printf("Marks in Chemistry: %d\n", chemistry);
+    printf("Marks in Computer Application: %d\n", comp);
+    printf("Total: %d\n", total);
+    printf("Percentage: %f\n", percentage);
+
+    if (percentage >= 80) 
+		{
+       		printf("Division = First\n");
+    	} 
+	else if (percentage >= 40) 
+		{
+        	printf("Division = Pass\n");
+    	} 
+	else 
+		{
+        	printf("Division = Fail\n");
+    	}
+}
+
+Output:
+
+Enter roll number: 12
+Enter name: saurabh
+Enter marks in physics: 60
+Enter marks in chemistry: 60
+Enter marks in math: 60
+
+Marksheet
+Roll No: 12
+Name of Student: saurabh
+Marks in Physics: 60
+Marks in Chemistry: 60
+Marks in Computer Application: 60
+Total: 180
+Percentage: 60.000000
+Division = Pass
+
+=====================================================================================================================================
+
+13.	Write a C program to read temperature in centigrade and display a suitable message according to temperature state below:
+	Temp < 0 then Freezing weather 
+	Temp 0-10 then Very Cold weather 
+	Temp 10-20 then Cold weather 
+	Temp 20-30 then Normal in Temp 
+	Temp 30-40 then Its Hot
+	Temp >=40 then Its Very Hot 
+	Test Data: 42
+	Expected Output:
+		It’s very hot.
+
+#include <stdio.h>
+int main() 
+{
+    int tmp;
+    printf("Enter the temperature in centigrade: ");
+    scanf("%d", &tmp);
+    if (tmp < 0) 
+	{
+        printf("Freezing weather.\n");
+    } 
+	else if (tmp < 10) 
+	{
+        printf("Very cold weather.\n");
+    } 
+	else if (tmp < 20) 
+	{
+        printf("Cold weather.\n");
+    } 
+	else if (tmp < 30) 
+	{
+        printf("Normal in temp.\n");
+    } 
+	else if (tmp < 40) 
+	{
+        printf("It's Hot.\n");
+    } 
+	else 
+	{
+        printf("It's very hot.\n");
+    }
+}
+
+Output:
+
+Enter the temperature in centigrade: 23
+Normal in temp.
+
+=====================================================================================================================================
+
+14.	Write a C program to check whether a triangle is Equilateral, Isosceles or Scalene.
+	Test Data:
+	50 50 60
+	Expected Output:
+		This is an isosceles triangle.
+
+#include <stdio.h>
+int main() 
+{
+    int side1, side2, side3;
+    printf("Enter sides of triangle: \n");
+    scanf("%d%d%d", &side1, &side2, &side3);
+    if(side1==side2 && side2==side3)
+        printf("The Given Triangle is equilateral\n");
+    else if(side1 == side2 || side2 == side3 || side3 == side1)
+        printf("The given Triangle is isosceles\n");
+    else
+        printf("The given Triangle is scalene\n");
+}
+
+Output:
+
+Enter sides of triangle:
+10
+11
+10
+The given Triangle is isosceles
+
+=====================================================================================================================================
+
+15.	Write a C program to check whether a triangle can be formed by the given value for the angles.
+	Test Data:
+	40 55 65
+	Expected Output:
+		The triangle is not valid.
+
+#include <stdio.h>
+int main()  
+{  
+   int anga, angb, angc, sum; 
+   printf("Input three angles of triangle : \n"); 
+   scanf("%d %d %d", &anga, &angb, &angc);
+   sum = anga + angb + angc;   
+   if(sum == 180)   
+   {  
+       printf("The triangle is valid.\n"); 
+   }  
+   else  
+   {  
+       printf("The triangle is not valid.\n"); 
+   }  
+}
+
+Output:
+
+Input three angles of triangle :
+60
+60
+60
+The triangle is valid.
+
+=====================================================================================================================================
+
+16.	Write a C program to check whether a character is an alphabet, digit or special character.
+	Test Data:@
+	Expected Output:
+		This is a special character.
+
+#include <stdio.h>
+int main() 
+{
+  char ch;
+  printf("Enter a character: ");
+  scanf("%c", &ch);
+  if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+    printf("This is an alphabet.\n");
+  else if(ch >= '0' && ch <= '9')
+    printf("This is a digit.\n");
+  else
+    printf("This is a special character.\n");
+}
+
+Output:
+
+Enter a character: $
+This is a special character.
+
+=====================================================================================================================================
+
+17.	Write a C program to check whether an alphabet is a vowel or consonant.
+	Test Data: k
+	Expected Output:
+		The alphabet is a consonant.
+
+#include <stdio.h>
+int main() 
+{
+    char ch;
+    printf("Enter an alphabet: ");
+    scanf("%c", &ch);
+    if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+    {
+        printf("The alphabet is Vowel.");
+    }
+    else if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+    {
+        printf("The alphabet is Consonant.");
+    }
+    else 
+    {
+        printf("The alphabet is not an alphabet.");
+    }
+}
+
+Output:
+
+Enter an alphabet: saurabh
+The alphabet is Consonant.
+
+=====================================================================================================================================
+
+18.	Write a program in C to calculate and print the Electricity bill of a given customer. 
+	The customer id., name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. 
+	The charge is as follow:
+	Unit	Charge/unit
+	up to 199	@1.20
+	200 and above but less than 400	@1.50
+	400 and above but less than 600	@1.80
+	600 and above	@2.00
+	If bill exceeds Rs. 400 then a surcharge of 15% will be charged and the minimum bill should be of Rs. 100/-
+	Test Data:
+	1001
+	James 
+	800
+	Expected Output:
+		Customer IDNO :1001 
+		Customer Name: James 
+		unit Consumed :800
+		Amount Charges @Rs. 2.00 per unit: 1600.00 
+		Surcharge Amount: 240.00
+		Net Amount Paid by the Customer: 1840.00
+
+#include <stdio.h>
+int main() 
+{
+    int customerId, unitConsumed;
+    char customerName[100];
+    float amountCharged = 0.0;
+    printf("Enter customer ID: ");
+    scanf("%d", &customerId);
+    printf("Enter customer name: ");
+    scanf("%s", customerName);
+    printf("Enter units consumed: ");
+    scanf("%d", &unitConsumed);
+        if (unitConsumed <= 199) 
+	{
+        amountCharged = unitConsumed * 1.20;
+    } 
+	else if (unitConsumed >= 200 && unitConsumed < 400) 
+	{
+        amountCharged = unitConsumed * 1.50;
+    } 
+	else if (unitConsumed >= 400 && unitConsumed < 600) 
+	{
+        amountCharged = unitConsumed * 1.80;
+    } 
+	else if (unitConsumed >= 600) 
+	{
+        amountCharged = unitConsumed * 2.00;
+    }
+    float surcharge = 0.0;
+    if (amountCharged > 400) 
+	{
+        surcharge = amountCharged * 0.15;
+    }
+    float netAmount = amountCharged + surcharge;
+    if (netAmount < 100) 
+	{
+        netAmount = 100;
+    }
+    printf("\nCustomer IDNO: %d\n", customerId);
+    printf("Customer Name: %s\n", customerName);
+    printf("Unit Consumed: %d\n", unitConsumed);
+    printf("Amount Charged @Rs. %f per unit: %f\n", (unitConsumed >= 600) ? 2.00 : (unitConsumed >= 400) ? 1.80 : (unitConsumed >= 200) ? 1.50 : 1.20, amountCharged);
+    printf("Surcharge Amount: %f\n", surcharge);
+    printf("Net Amount Paid by the Customer: %f\n", netAmount);
+}
+
+Output:
+
+Enter customer ID: 12
+Enter customer name: Saurabh
+Enter units consumed: 100
+
+Customer IDNO: 12
+Customer Name: Saurabh
+Unit Consumed: 100
+Amount Charged @Rs. 1.200000 per unit: 120.000000
+Surcharge Amount: 0.000000
+Net Amount Paid by the Customer: 120.000000
+
+=====================================================================================================================================
+
+19.	Write a program in C to read any Month Number in integer and display the number of days for this month.
+	Test Data:
+	7
+	Expected Output:
+		Month have 31 days
+
+#include <stdio.h>
+int main() 
+{
+    int monthNumber;
+    printf("Enter month number (1-12): ");
+    scanf("%d", &monthNumber);
+    int days;
+    switch(monthNumber) 
+	{
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            days = 31;
+            break;
+        case 4: case 6: case 9: case 11:
+            days = 30;
+            break;
+        case 2:
+            days = 28; 
+            break;
+        default:
+            printf("Invalid month number!\n");
+            return 1;
+    }
+    printf("Month has %d days\n", days);
+}
+
+Output:
+
+Enter month number (1-12): 8
+Month has 31 days
+
+=====================================================================================================================================
+
+20.	Write a program in C which is a Menu-Driven Program to compute the area of the various geometrical shape.
+
+#include <stdio.h>
+int main() 
+{
+    int choice;
+    float radius, side, length, breadth, base, height;
+    const float PI = 3.14159265358979323846;
+
+    while(1) {
+        printf("\n-------------------------");
+        printf("\n 1 --> Circle\n 2 --> Rectangle\n 3 --> Triangle\n 4 --> Square");
+        printf("\n-------------------------");
+        printf("\nEnter the Figure code : ");
+        scanf("%d", &choice);
+
+        switch(choice) 
+		{
+            case 1:
+                printf("\nEnter the radius : ");
+                scanf("%f", &radius);
+                printf("Area of a circle = %f\n", PI * radius * radius);
+                break;
+            case 2:
+                printf("\nEnter the breadth and length : ");
+                scanf("%f%f", &breadth, &length);
+                printf("Area of a Rectangle = %f\n", length * breadth);
+                break;
+            case 3:
+                printf("\nEnter the base and height : ");
+                scanf("%f%f", &base, &height);
+                printf("Area of a Triangle = %f\n", 0.5 * base * height);
+                break;
+            case 4:
+                printf("\nEnter the side : ");
+                scanf("%f", &side);
+                printf("Area of a Square= %f\n", side * side);
+                break;
+            default:
+                printf("\nInvalid choice!\n");
+                break;
+        }
+        exit(0); 
+    }
+}
+
+Output:
+
+-------------------------
+ 1 --> Circle
+ 2 --> Rectangle
+ 3 --> Triangle
+ 4 --> Square
+-------------------------
+Enter the Figure code : 1
+
+Enter the radius : 5
+Area of a circle = 78.539818
+=====================================================================================================================================
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
